@@ -1,24 +1,54 @@
-import React from "react";
+import React, {useState,useEffect} from "react";
 import "./App.css";
+import Imagegetter from "./Components/ImageRenderer";
 import axios from "axios";
-import imageGetter from "..Components/ImageRendered";
+
+// That fancy NASA Url.
+let url = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY'
 
 function App() {
   
+  const [data, setData] = useState([]);
+
+
+  useEffect( () => {
+
+     
+
+    axios.get(url)
+    .then( response => {
+
+      //console.log(response)
+
+      setData(response.data)
+
+    }) // I hate you error.....
+    .catch(error => console.log('Big fat errrrrrrror, AGAIN!', error))
+
+  }, []);
   
   return (
 
     
     <div className="App">
+        
 
-      <imageGetter />
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
-
+        <Imagegetter 
+       
+       title={data.title}
+       img={data.url}
+       explanation = {data.explanation} 
+       
+       
+       />
+       
+        
+      
+      
      
     </div>
+    
+
   );
 }
 
