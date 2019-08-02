@@ -1,5 +1,18 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
+import styled from 'styled-components'; 
 
+const WrapperDiv = styled.div`
+    width: 80%;
+    height: 80%;
+`;
+
+const StyledP = styled.p`
+
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+
+`;
 
 export function Imagegetter (props) {
 
@@ -7,12 +20,12 @@ return (
 
 
     //Please Please Render
-    <div>
+    <WrapperDiv>
         <h1>{props.title}</h1>
         <img src={props.img} alt='#'></img>
-        <p>{props.explanation}</p>
-    </div>
-)
+        <StyledP>{props.explanation}</StyledP>
+    </WrapperDiv>  
+);
 
 
 
