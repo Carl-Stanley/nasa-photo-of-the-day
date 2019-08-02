@@ -15,6 +15,7 @@ const StyledP = styled.p`
     text-align: justify;
     border: .5px black solid;
     background-color: aquamarine;
+    margin-bottom: 10px;
 `;
 
 const StyledHeading = styled.h1`
