@@ -4,6 +4,8 @@ import styled from 'styled-components';
 const WrapperDiv = styled.div`
     width: 80%;
     height: 80%;
+    margin: 0 auto;
+    background-color: white;
 `;
 
 const StyledP = styled.p`
@@ -11,6 +13,13 @@ const StyledP = styled.p`
     width: 80%;
     margin: 0 auto;
     text-align: justify;
+    border: .5px black solid;
+    background-color: aquamarine;
+`;
+
+const StyledHeading = styled.h1`
+
+    font-size: 1.5rem;
 
 `;
 
@@ -21,7 +30,7 @@ return (
 
     //Please Please Render
     <WrapperDiv>
-        <h1>{props.title}</h1>
+        <StyledHeading>{props.title}</StyledHeading>
         <img src={props.img} alt='#'></img>
         <StyledP>{props.explanation}</StyledP>
     </WrapperDiv>  
