@@ -2,7 +2,7 @@ import React, {useState,useEffect} from "react";
 import "./App.css";
 import Imagegetter from "./Components/ImageRenderer";
 import axios from "axios";
-import styled from 'styled-components';
+
 // That fancy NASA Url.
 let url = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY'
 
